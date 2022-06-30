@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+                body{
+            position: relative;
+        }
+        #firstchild > p{
+            color: wheat;
+        }
+        #parent{
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            
+            background-color: black;
+            padding: 0% 10px 0% 10px;
+            border-radius: 15px;
+            /* position: absolute; */
+            margin: auto;
+            margin-left: 5%;
+            
+        }
+        #secondchild{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #secondchild > a{
+            text-decoration: none;
+            margin-left: 50px;
+            color: azure;
+            
+        }
+        #secondchild > a:hover{
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="parent">
+        <div id="firstchild"><p>Reebok</p></div>
+        <div id="secondchild">
+            <a >Men</a>
+            
+            <a>Women</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sinup</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                body{
+            position: relative;
+        }
+        #firstchild > p{
+            color: wheat;
+        }
+        #parent{
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            
+            background-color: black;
+            padding: 0% 10px 0% 10px;
+            border-radius: 15px;
+            /* position: absolute; */
+            margin: auto;
+            margin-left: 5%;
+            
+        }
+        #secondchild{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #secondchild > a{
+            text-decoration: none;
+            margin-left: 50px;
+            color: azure;
+            
+        }
+        #secondchild > a:hover{
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+    <style>
+        #container {
+        display: block;
+       
+      }
+      #container > div{
+          
+          display: block;
+          align-items:stretch;
+          margin: auto;
+          margin-top: 50px;
+          width: 80%;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          padding-bottom: 10px;
+          padding-left: 10px;
+          
+      }
+      p{
+          font-size: 14px;
+          padding-left: 10px;
+          display: block;
+          align-items:stretch;
+          height: 24px;
+      }
+      button{
+        margin-right: 50px;
+       
+        margin: auto;
+      }
+      #container > div > div{
+          display: flex;
+          gap: 30px;
+      }
+      #container > div > div>p:last-child{
+        text-decoration: line-through;
+        color: palevioletred;
+        
+      }
+     
+      #disamout{
+         width: 30%;
+         margin: auto;
+         margin-right: 0%;
+      }
+    </style>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+
+
+  <div id="parent">
+    <div id="firstchild">
+        <p>Reebok</p>
+    </div>
+        <div id="secondchild">
+            <a href="mens.html">Men</a>
+
+            <a href="womens.html">Women</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sinup</a>
+            <a href="cart.html">cart</a>
+        </div>
+    </div>
+    <div id="disamout">
+        
+        <h1 id="total"></h1>
+        <h1 id="count"></h1>
+        <input type="text" name="promo" value="" id="promo" placeholder="promo">
+        <button id="promobt">promo Submit</button>
+    </div>
+    <div id="container">
+
+    </div>
+
+    
+    
+    
+</body>
+</html>
+<script>
+
+
+
+
+
+
+
+
+
+
+
+
+let cartdata = JSON.parse(localStorage.getItem("cart")) || []
+
+
+   
+   
+   cartdata.forEach(function(elem,index){
+    var div = document.querySelector("#container")
+    
+    var child = document.createElement("div")
+   var img = document.createElement("img");
+    img.setAttribute("src", elem.image_url);
+
+    var p = document.createElement("p");
+    p.innerText = elem.name;
+
+    var price = document.createElement("p");
+    price.innerText = elem.price;
+
+    var strikedoffprice = document.createElement("p");
+    strikedoffprice.innerText = elem.strikedoffprice;
+
+    var button1 = document.createElement("button");
+    button1.innerHTML = "Add to Cart + 1";
+    button1.addEventListener("click",function(){
+      myfun(elem);
+    })
+
+    var button2 = document.createElement("button");
+    button2.innerHTML = "Delete";
+    button2.addEventListener("click",function(){
+      del(elem,index);
+    })
+
+    var childtwo = document.createElement("div")
+    childtwo.append(price,strikedoffprice)
+    child.append(img,p,childtwo,button1,button2)
+    div.append(child)    
+   })
+   
+   function del(elem,index){
+       cartdata.splice(index,1)
+       localStorage.setItem("cart",JSON.stringify(cartdata));
+       window.location.reload();
+   }
+
+
+   function myfun(elem){
+     //console.log(cartdata)
+     cartdata.push(elem)
+     localStorage.setItem("cart",JSON.stringify(cartdata))
+     window.location.reload();
+   }
+
+   let finaldata  = JSON.parse(localStorage.getItem("cart"))
+   var sum = 0;
+   var x = finaldata.forEach(function(elem){
+        return sum += Number(elem.price)
+   })
+
+ 
+
+document.querySelector("#promobt").addEventListener("click",function(){
+     value = document.querySelector("#promo").value;
+     var dis = Math.floor((sum/100)*30)
+    
+     if("masai30"==value){
+        alert("promo added")
+        document.querySelector("#total").innerHTML= "Total amount = "+(sum-dis)
+     }
+     else{
+         alert("Wrong Promo")
+        document.querySelector("#total").innerHTML= "Total amount = "+sum
+     }
+ })
+
+ 
+   document.querySelector("#total").innerHTML= "Total amount = "+sum
+   document.querySelector("#count").innerHTML= "Item count = "+finaldata.length
+
+
+
+
+
+</script>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>\
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            width: 90%;
+            margin: auto;
+        }
+        h1{
+            text-align: center;
+        }
+        body{
+            background-color: bisque;
+        }
+        .container>div:nth-child(1){
+            width:80%;
+            margin: auto;
+            background-color: white;
+            padding: 40px 0px 40px 0px;
+        }
+        input,select{
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 1% 5px;
+        }
+        
+        #product  {
+            width: 80%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            gap: 30px;
+            
+
+        }
+        #product > div{
+            width: 150px;
+            height: auto;
+        }
+        h2,p{
+            width: 100%;
+            margin: auto;
+            margin: auto;            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="form">
+            <form>
+                <select name="" id="catagory">
+                    
+                    <option value="electronics">Electronics</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="home appliance">Home Appliance</option>
+                    <option value="books">Books</option>
+                </select>
+                <input id="title" type="text" placeholder="TITLE">
+                <input id="discription" type="text" placeholder="DIS">
+                <input id="price" type="number" placeholder="NUM">
+                <input type="submit">
+            </form>
+        </div>
+        <div id="product">
+            
+        </div>
+        
+    </div>
+</body>
+
+
+<script>
+    //dom variables
+    var form = document.querySelector("#form");
+    var product = document.querySelector("#product");
+
+    // All the Function
+    function display(data){
+        
+
+        var parent = document.createElement("div");
+
+        var heading = document.createElement("h2");
+        heading.textContent=data.catagory;        
+        
+        var title = document.createElement("p");
+        title.textContent=data.title;
+
+        var price = document.createElement("p");
+        price.innerHTML=data.price;
+        
+        var dis = document.createElement("p");
+        dis.innerHTML = data.discription;
+
+        var btn = document.createElement("button");
+        btn.textContent="Delete"
+        btn.addEventListener("click",function(event){
+            event.target.parentNode.remove();
+        })
+
+        parent.append(heading,title,dis,price,btn)
+        product.append(parent)
+        
+    }
+
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+    
+        var data = {
+            catagory:document.querySelector("#catagory").value,
+            title:document.querySelector("#title").value,            
+            price:document.querySelector("#price").value,
+            discription:document.querySelector("#discription").value,
+        }
+        display(data)
+        
+    })
+</script>
+
+</html>

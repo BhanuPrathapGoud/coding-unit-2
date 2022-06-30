@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script> 
+ var bobj = [
+    { name: "Primary", color: "white", bgColor: "blue" },
+    { name: "Secondary", color: "white", bgColor: "grey" },
+    { name: "Danger", color: "white", bgColor: "red" },
+    { name: "Warning", color: "black", bgColor: "yellow" },
+    { name: "Info", color: "white", bgColor: "cyan" },
+    { name: "Light", color: "black", bgColor: "white" },
+    { name: "Success", color: "white", bgColor: "green" },
+    { name: "Dark", color: "white", bgColor: "black" },
+    { name: "Link", color: "blue", bgColor: "white" },
+  ];
+  
+
+
+
+  bobj.forEach(function(el){
+
+    var btn = document.createElement("button")
+    btn.innerText = el.name
+    btn.style.backgroundColor= el.bgColor
+    btn.style.color = el.color
+    btn.style.margin="6px"
+    btn.style.padding ="10px 20px 10px 20px"
+    document.querySelector("body").append(btn)
+
+  })
+
+
+
+
+
+
+
+
+  
+
+
+
+  // for(i=0 ; i<9 ; i++)
+  // {
+  //   var btn =document.createElement("button") ;
+  //   btn.innerText= "viswa"
+  //   btn.style.margin="6px"
+
+  //   document.querySelector("body").append(btn)
+  // }
+
+
+  </script>

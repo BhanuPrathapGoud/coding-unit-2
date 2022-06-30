@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form submit</title>
+    <style>
+        *{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input id="nam"  type="text" placeholder="Enter Name">
+        <input id="ag" type="Number" placeholder="Enter your age">
+        <!-- <section> -->
+            <select  id="gender">
+                <option value="mail">M</option>
+                <option value="female">F</option>
+                
+              <!-- </select> -->
+        </section>
+        <input id="email"  type="text" placeholder="Enter your mail id" innerText="">
+        <input id="mnumber" type="Number" placeholder="Enter your mobile number">
+        <button id="sub">Submit</button>
+    </form>
+</body>
+<script>
+    document.querySelector("#sub").addEventListener("click",functionsub)
+    
+    function functionsub(e){
+        e.preventDefault();        
+        var n=document.querySelector("#nam").value;
+        var g=document.querySelector("#gender").value;
+        var ag=document.querySelector("#ag").value;
+        var em=document.querySelector("#email").value;
+        var mnum=document.querySelector("#mnumber").value;       
+        console.log(n,ag,g,em,mnum)
+    }
+</script>
+</html>

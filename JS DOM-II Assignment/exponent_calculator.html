@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="first"  type="Number" placeholder="Enter First Num">
+    <input id="second" type="Number" placeholder="Enter Second Num">
+    <button id="firstbt">Submit</button>
+    <button id="secondbt">Click here to find the exponent!</button>
+    <p></p>
+</body>
+</html>
+<script>
+    document.querySelector("#firstbt").addEventListener("click",muSum)
+    function muSum(){
+        var firstnum = document.querySelector("#first").value
+        var secondnum = document.querySelector("#second").value
+        var sum = firstnum * secondnum
+        alert(sum)
+    }
+    document.querySelector("#secondbt").addEventListener("click",mysumse)
+    function mysumse(){
+        var firstnum = Number(document.querySelector("#first").value)
+        var secondnum = Number(document.querySelector("#second").value)
+        var secondsum = 1;
+        for(var i = 1 ; i <= secondnum ; i++ ){
+            secondsum *= firstnum;
+            
+        }
+        document.querySelector("p").innerText=secondsum;    
+    }
+
+</script>

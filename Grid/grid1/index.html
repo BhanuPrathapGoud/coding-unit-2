@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .cont{
+            
+            width: 40%;
+            margin: auto;
+            display: grid;
+            
+            
+            grid-template-rows: repeat(3 ,100px);
+            grid-template-columns: repeat(4 , 150px);
+            gap: 10px;
+            grid-template-areas:
+            "a a b b"
+            "c d d d"
+            "e e e e";
+            
+            
+        }
+        .cont > div{
+            background-color: rgb(27, 25, 25);
+            border-radius: 15px;
+            padding-left: 20px;
+            padding-top: 20px;
+            font-size: 36px;
+            color: white;
+        }
+        .cont > div:nth-child(1){
+            
+            grid-area: a;
+        }
+        .cont > div:nth-child(2){
+            
+            grid-area: b;
+        }
+        .cont > div:nth-child(3){
+            
+            grid-area: c;
+        }
+        .cont > div:nth-child(4){
+            
+            grid-area: d;
+        }
+        .cont > div:nth-child(5){
+            
+            grid-area: e;
+            margin-bottom: -30px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "cont">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+    </div>
+    
+</body>
+</html>

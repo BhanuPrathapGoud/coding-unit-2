@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" value="" id="year" name="Year">
+    <select id="gender">
+        <option value="">Select Gender</option>
+        <option value="Male">M</option>
+        <option value="Female">F</option>
+    </select>
+    <button onclick="ageCheck()">Submit</button>
+    <p id="check">MARRIAGE AGE VALIDATOR</p>
+</body>
+</html>
+<script>
+    function ageCheck(){
+        var year= document.getElementById("year").value;
+        var gender = document.getElementById("gender").value
+        if(gender == "Male"){
+            if(year< 2001){
+            alert("You can get marraiage");
+            
+            }
+            else if(year> 2001){
+                alert("You can't get marraiage");
+            }
+            else{
+                alert("You are just old enough to get marraiage");
+            }  
+        }
+        if(gender == "Female"){
+            if(year< 2004){
+            alert("You can get marraiage");
+            }
+            else if(year> 2004){
+                alert("You can't get marraiage");
+            }
+            else{
+                alert("You are just old enough to get marraiage");
+            }  
+        }
+        
+        
+    }
+</script>

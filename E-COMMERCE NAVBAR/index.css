@@ -1,0 +1,34 @@
+        body{
+            position: relative;
+        }
+        #firstchild > p{
+            color: wheat;
+        }
+        #parent{
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            
+            background-color: black;
+            padding: 0% 10px 0% 10px;
+            border-radius: 15px;
+            /* position: absolute; */
+            margin: auto;
+            margin-left: 5%;
+            
+        }
+        #secondchild{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #secondchild > a{
+            text-decoration: none;
+            margin-left: 50px;
+            color: azure;
+            
+        }
+        #secondchild > a:hover{
+            color: red;
+            cursor: pointer;
+        }

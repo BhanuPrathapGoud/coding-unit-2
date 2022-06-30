@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button </title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            height: 3000px;
+        }
+        .main{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            position: fixed;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+        .main>div{
+            display: flex;
+            width: 90px;
+            height: 40px;
+            /* border: solid; */
+            border-radius: 7px;
+            margin: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .main > div:nth-child(1){
+            background-color: blue;
+            color: white;
+        }
+        .main > div:nth-child(2){
+            background-color: blue;
+            color: rgb(102, 97, 97);
+        }
+        .main > div:nth-child(3){
+            background-color: rgb(24, 183, 40);
+            color: white;
+        }
+        .main > div:nth-child(4){
+            background-color: rgb(238, 54, 34);
+            color: white;
+        }
+        .main > div:nth-child(5){
+            background-color: rgb(233, 150, 25);
+            color: white;
+        }
+        .main > div:nth-child(6){
+            background-color: rgb(0, 170, 255);
+            color: white;
+        }
+        .main > div:nth-child(7){
+            background-color: rgb(254, 249, 249);
+            color: rgb(6, 6, 6);
+        }
+        .main > div:nth-child(8){
+            background-color: rgb(0, 0, 0);
+            color: rgb(210, 209, 209);
+        }
+        .main > div:nth-child(9){
+            background-color: rgb(254, 249, 249);
+            color: rgb(74, 109, 247);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+       <div><p>Primary</p></div>
+       <div><p>Secondary</p></div>
+       <div><p>Success</p></div>
+       <div><p>Danger</p></div>
+       <div><p>Warning</p></div>
+       <div><p>Info</p></div>
+       <div><p>Light</p></div>
+       <div><p>Dark</p></div>
+       <div><p>Link</p></div>
+    </div>
+</body>
+</html>
