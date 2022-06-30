@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web 18 Unit-2 C3</title>
+    <style>
+      #reports{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        
+      }
+      #reports > div{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        width : 100px;
+        padding-left: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <div>
+        <h1>Masai Evaluations Tracker</h1>
+        <form id="form">
+            <!-- When this form get submitted update the DOM According to the question -->
+          <input placeholder="Name" id="name" type="text"  />
+          <select id="batch">
+            <option value="WEB16">WEB16</option>
+            <option value="WEB17">WEB17</option>
+            <option value="WEB18">WEB18</option>
+          </select>
+          <select id="type">
+            <option value="DSA">DSA</option>
+            <option value="Coding">Coding</option>
+          </select>
+          <input placeholder="Student Code" id="stuent_code" type="text" />
+          <select id="unit">
+            <option value="Unit-1">Unit-1</option>
+            <option value="Unit-2">Unit-2</option>
+            <option value="Unit-3">Unit-3</option>
+            <option value="Unit-4">Unit-4</option>
+          </select>
+          <select id="sprint">
+            <option value="Sprint-1">Sprint-1</option>
+            <option value="Sprint-2">Sprint-2</option>
+            <option value="Sprint-3">Sprint-3</option>
+            <option value="Sprint-4">Sprint-4</option>
+          </select>
+          <input placeholder="Score(0-10)" id="score" type="number" />
+          <input type="submit" />
+        </form>
+      </div>
+      <div id="reports">
+        <!-- All the cards that get appended with Javascript on form submit goes here -->
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+      console.log("working");
+      var form = document.querySelector("#form")
+      form.addEventListener("submit",function function1(){
+       
+        
+        
+       var data = {
+          batch : document.querySelector("#batch").value,
+        type : document.querySelector("#type").value,
+        unit : document.querySelector("#unit").value,
+        sprint : document.querySelector("#sprint").value,
+        score : document.querySelector("#score").value,
+        name : document.querySelector("#name").value,
+        stuent_code : document.querySelector("#stuent_code").value,
+       }
+       reports (data);
+      
+
+      event.preventDefault()
+     })
+      
+      
+
+      function reports (data){
+        
+        
+        var name = document.createElement("h1")
+        name.innerHTML= data.name
+        console.log(data.name)
+
+        var batch = document.createElement("p")
+        batch.innerHTML=data.batch
+
+        var type = document.createElement("p")
+        type.innerHTML=data.type
+
+        var stuent_code = document.createElement("p")
+        stuent_code.innerHTML=data.stuent_code
+
+        var sprint = document.createElement("p")
+        sprint.innerHTML=data.sprint
+
+        var score = document.createElement("p")
+        score.innerHTML=data.score
+
+        var unit = document.createElement("p")
+        unit.innerHTML=data.unit
+
+        var h3 = document.createElement("h3")
+        if(data.score<=3){
+         h3.innerHTML= "Learning";
+         h3.style.color="red"
+         console.log("Lere")
+        }
+        else if(data.score>3 && data.score<7){
+          h3.innerHTML= "Achieving";
+          h3.style.color="orange"
+        }
+        else if(data.score > 7 && data.score <= 10){
+          h3.innerHTML="Mastery";
+          h3.style.color="green"
+        }
+
+        var btn = document.createElement("button")
+        btn.innerHTML="Delete"
+        btn.addEventListener("click",function remove(){
+          div.innerHTML=""
+        })
+        var div = document.createElement("div")
+        div.append(name,batch,type,stuent_code,sprint,score,unit,h3,btn);
+        document.querySelector("#reports").append(div)
+      }
+
+
+
+  
+ 
+</script>

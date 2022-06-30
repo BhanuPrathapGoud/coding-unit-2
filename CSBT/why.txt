@@ -1,0 +1,37 @@
+1 . You are a senior developer and your job is to ensure that the quality of the programs that are written by the junior developers is maintained.
+ But lately, you have been observing that there are a lot of bugs that are being detected by the testers and they are coming back to you.
+ Write the steps that you will take to handle the above situation.
+
+
+
+step:1- figuring the problem:
+		1. Why this bug gets to happen.
+		2. why didn't you find the bug before submitting it.
+		3. Why do you not fix a bug before submitting it.
+		4. why didn't you concern your superior or tester to fix the bug.
+		5. why did not complete assigned work on time.
+
+
+step:2: fixing the problem:
+	1. reach out to your team meets if you need some support while doing the project.
+	2. give more time to understand the problem and solve it according to it.
+	3. improve productivity while doing the project
+	4. take advice from your mentor to understand and adopt a mission-critical mentality.
+	5. give sufficient time to solve the problem.
+
+
+
+2. You have been delaying submitting your assignments and stacking a lot of them. 
+Use the “Five Why” to understand the root cause of the problem.
+
+1. Why does the submission gets delay
+2. why I am not able to manage my time.
+3. why I am getting stacked a lot of them.
+4. why do I am not understanding the lecture.
+5. why I am not able to focus on the lecture.
+
+
+
+
+
+

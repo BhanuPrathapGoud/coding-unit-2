@@ -1,0 +1,23 @@
+
+
+
+var object = {
+  r:10,
+  pi:3.14,
+  
+  area_of_circle : function(x,y){
+                    var area = this.pi * this.r * this.r;
+                    return area;
+                  },
+  circumference : function(x,y){
+                    var circumference = 2 * this.pi * this.r;
+                    return circumference;
+                  }
+}
+
+var r = 10, pi = 3.14;
+var a = object.area_of_circle(r,pi)
+
+var b = object.circumference(r,pi)
+console.log("Area of circle: ",a);
+console.log("Circumference: ",b);

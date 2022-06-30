@@ -1,0 +1,27 @@
+var lower = "abcdefghijklmnopqrstuvwxyz";
+var upper= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+var array = ["masai","school"];
+
+function firstLetterCapital(arr){
+  var out = [];
+for(var i = 0 ; i< array.length ; i++){
+  x = array[i];
+  var bag = "";
+  for(var j = 0 ; j < lower.length ; j++){
+    if(x[0] == lower[j]){
+      bag = bag + upper[j]
+    }
+  }
+  for(var k = 1; k<x.length ;k++){
+    bag = bag + x[k];
+  }
+  out.push(bag);
+  
+}
+return console.log(out)
+}
+firstLetterCapital(array);
+array = ["hi", "john", "how", "are", "you"]
+
+firstLetterCapital(array);

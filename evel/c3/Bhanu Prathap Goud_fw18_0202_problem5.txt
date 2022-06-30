@@ -1,0 +1,27 @@
+var dish = ["Paratha", "Masala Dosa", "Noodles", "Spring Rolls", "Samosa"];
+var category = ["North Indian", "South Indian", "Chinese", "Chinese", "North Indian"];
+var  price  = [40, 80, 50, 60, 25];
+
+
+var data = [];
+for(var i = 0 ; i < dish.length ; i++){
+  object = {};
+  object["dish"] = dish[i],
+  object["category"] = category[i],
+  object["price"] = price[i]
+  data.push(object);
+}
+console.log(data);
+for(var key in data){
+  console.log(data[key]["dish"])
+}
+var price = "";
+var text = "";
+for(var keys in data){
+  
+  if(data[keys]["price"]  > price){
+    price = data[keys]["price"]
+    text = data[keys];
+  }
+}
+console.log(text)
