@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .box{
+            width:50px;
+            height: 50px;
+            border: 1px solid green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: blue;            
+        }
+        .secondbox{
+            width:40px;
+            height: 40px;
+            border: 1px solid green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+                       
+        }
+        .secondparent{
+           width: 560px;
+           margin: auto;
+           margin-top: 50px;           
+           border: 1px solid green;
+        }
+        .secondparent>div:first-child{
+            display: flex;
+            background-color: rgb(47, 78, 9);  
+        }
+        .secondparent>div:last-child{
+            display: flex;
+            background-color: rgb(134, 239, 5);  
+        }
+        .parent{
+           width: 1105px;
+           margin: auto;
+           position: relative;
+           margin: auto;
+           
+        }
+        .first ,.second,.third,.forth,.five,.six,.seven{
+            display: flex;
+            justify-content: space-between;
+        }
+        .first >div,.second >div,.third >div,.forth >div,.five >div,.six >div,.seven >div{
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;            
+        }
+        .first div:first-child{
+            background-color: brown;
+        }
+        .second div:first-child>div:first-child,.third div:first-child>div:first-child ,.forth >div:first-child>div:first-child  ,.five >div:first-child>div:first-child  ,.six >div :first-child,.seven >div :first-child{
+            background-color: green;
+        }
+        .first div:last-child,.second div:last-child>div:last-child,.third div:last-child>div:last-child ,.forth >div:last-child>div:last-child  ,.five >div:last-child>div:last-child  ,.six >div >div:last-child{
+            background-color: gold;
+        }
+        .second div:first-child>div:nth-child(2),.third div:first-child>div:nth-child(2) ,.forth >div:first-child>div:nth-child(2)  ,.five >div:first-child>div:nth-child(2)  ,.six >div >div:nth-child(2),.seven >div >div:nth-child(2){
+            background-color: rgb(235, 22, 93);
+        }
+
+        .second div:last-child>div:nth-child(5),.third div:last-child>div:nth-child(5) ,.forth >div:last-child>div:nth-child(14)  ,.five >div:last-child>div:nth-child(14)  ,.six >div >div:nth-child(17){
+            background-color: rgb(233, 15, 142);
+        }
+        .six >div >div:nth-child(3),.seven >div >div:nth-child(3){
+            background-color: pink;
+        }
+        
+        .si{
+            width:140px;
+            height: 140px;
+            border: 1px solid black;
+            position: absolute;
+            left: 180px;
+            top:40px;
+            padding-left:10px;
+            background-color: rgb(34, 128, 34);
+           
+        }
+        .si h1{
+            font-size: 50px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        .si>p:first-child{
+            text-align: end;
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+        #purple{
+            background-color: purple;
+        }
+        #orange{
+            background-color: orange;
+        }
+        #green{
+            background-color: green;
+        }
+        #gray{
+            background-color: gray;
+        }
+        body > h1{
+            text-align: center;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <h1>THE PERIODIC TABLE OF ELEMENTS</h1>
+    <div class="parent">
+        <div class="si">
+            <p>14</p>
+            <h1>Si</h1>
+            <p>silicon</p>
+        </div>
+        <div class="first">
+            <div class="box">H</div class="box">
+            <div class="box"></div class="box">
+        </div class="box">
+        <div class="second">
+            <div>
+                <div class="box"></div class="box">
+                <div class="box">4</div class="box">
+            </div>
+            <div>
+                <div class="box" id="purple"></div class="box">
+                <div class="box" id="green"></div class="box">
+                <div class="box" id="green"></div class="box">
+                <div class="box" id="green"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+            </div>
+            
+        </div>
+        <div class="third">
+            <div>
+                <div class="box"></div class="box">
+                <div class="box">12</div class="box">
+            </div>
+            <div>
+                <div class="box" id="orange"></div class="box">
+                <div class="box" id="purple"></div class="box">
+                <div class="box" id="green"></div class="box">
+                <div class="box" id="green"></div class="box">                
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+            </div>
+            
+        </div>
+        <div class="forth">
+            <div>
+                <div class="box"></div class="box">
+                <div class="box">20</div class="box">
+            </div>
+            <div>
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box" id="orange"></div class="box">
+                <div class="box"  id="purple"></div class="box">
+                <div class="box"  id="purple"></div class="box">
+                <div class="box" id="green"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+            </div>
+            
+        </div>
+        <div class="five">
+            <div>
+                <div class="box"></div class="box">
+                <div class="box">38</div class="box">
+            </div>
+            <div>
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box" id="orange"></div class="box">
+                <div class="box" id="orange"></div class="box">
+                <div class="box" id="purple"></div class="box">
+                <div class="box" id="purple"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+            </div>
+            
+        </div>
+        <div class="six">
+            <div>
+                <div class="box"></div class="box">
+                <div class="box">56</div class="box">
+                <div class="box"></div class="box">            
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box" id="orange"></div class="box">
+                <div class="box" id="orange"></div class="box">
+                <div class="box" id="orange"></div class="box">
+                <div class="box" id="purple"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+            </div>            
+        </div>
+        <div class="seven">
+            <div>
+                <div class="box"></div class="box">
+                <div class="box">88</div class="box">
+                <div class="box"></div class="box">            
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box"></div class="box">
+                <div class="box" id="gray"></div class="box">
+                <div class="box" id="gray"></div class="box">
+                <div class="box" id="gray"></div class="box">
+                <div class="box" id="gray"></div class="box">
+                <div class="box" id="gray"></div class="box">
+                <div class="box" id="gray"></div class="box">
+            </div>            
+        </div>
+    </div>
+    <div class="secondparent">
+        <div class="fir">
+            <div class="secondbox">La</div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+        </div>
+        <div class="sec">
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox">Am</div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox"></div>
+            <div class="secondbox">No</div>
+        </div>
+    </div>
+</body>
+</html>

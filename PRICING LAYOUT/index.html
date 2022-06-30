@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #heading{
+        width:40%;
+        height: auto;
+        margin: auto;
+        text-align: center;
+    }
+    #heading>h1{
+        font-size: 50px;
+    }
+    #heading > p {
+        margin-top: -20px;
+        font-size: 22px;
+        color: grey;
+        line-height: 30px;
+    }
+    #card-section{
+        width: 80%;
+        height: auto;        
+        
+        margin: auto;
+        margin-top: 100px;
+        display: flex;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border-radius: 15px;
+        
+    }
+    #card-section > div{
+        width: 30%;
+        height: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    #card-section > div:nth-child(1) > h1{
+        color: green;
+    }
+    #card-section > div:nth-child(2) > h1{
+        color: orange;
+    }
+    #card-section > div:nth-child(3) > h1{
+        color: blue;
+    }
+    
+    #card-section > div > h1 + p{
+        font-style:italic;
+        color:grey;
+        margin-top: -15px;
+    }
+    p + p{
+        padding: 0px 35px 0px 35px;
+        font-size: 22px;
+        line-height: 30px;        
+    }
+    button {
+        border: 1px solid rgb(60, 60, 233);
+        background-color: white;
+        color: rgb(60, 60, 233);
+        border-radius: 15px;
+        padding:20px 50px 20px 50px;
+        font-size: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-weight: bold;
+    }
+    button:hover {
+        border: 1px solid white;
+        background-color:rgb(60, 60, 233) ;
+        color: white;
+
+    }
+    
+    
+    </style>
+    
+</head>
+<body>
+    <div id="heading">
+        <h1>Choose a plan that right for your business</h1>
+        <p>WE collect reviews from our users so you can get an honest opinion of what an experience with our website are really like!</p>
+    </div>
+    <div id="card-section">
+        <div>
+            <h2>Starter Plan</h2>
+            <h1>Free</h1>
+            <p>Per month</p>
+            <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website.</p>
+            <button>Start Now</button>
+        </div>
+        <div>
+            <h2>Business Plan</h2>
+            <h1>$39.00</h1>
+            <p>Per month</p>
+            <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website.</p>
+            <button>Start Now</button>
+        </div>
+        <div>
+            <h2>Premium Plan</h2>
+            <h1>$59.00</h1>
+            <p>Per month</p>
+            <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website.</p>
+            <button>Start Now</button>
+        </div>
+    </div>
+</body>
+</html>

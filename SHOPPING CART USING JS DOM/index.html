@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+       #container{
+           display: grid;
+       grid-template-columns: repeat(4, 250px);
+       grid-template-rows: repeat(1, auto);
+       gap: 20px;
+      justify-content: center;
+       margin-top: 70px;
+       }
+       h2{
+           font-size: 17px;
+       }
+      h2,h3,p{
+          padding-left: 20px;
+      }
+      h3,p{
+       display: inline;
+      }
+      p{
+          text-decoration: line-through;
+      }
+      img{
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div id="container"></div> -->
+  </body>
+</html>
+<script>
+  var data = [
+    {
+      imgUrl:
+        "https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp",
+      name: "LATEST MEN’S SNEAKER",
+      price: "$25.00",
+      strikedOffPrice: "$95.00",
+    },
+    {
+      imgUrl:
+        "https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp",
+      name: "LATEST MEN’S SNEAKER",
+      price: "$35.00",
+      strikedOffPrice: "$100.00",
+    },
+    {
+      imgUrl:
+        "https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp",
+      name: "LATEST MEN’S SNEAKER",
+      price: "$35.00",
+      strikedOffPrice: "$100.00",
+    },
+    {
+      imgUrl:
+        "https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp",
+      name: "LATEST MEN’S SNEAKER",
+      price: "$35.00",
+      strikedOffPrice: "$100.00",
+    },
+  ];
+
+  var bigBox = document.createElement("div");
+  bigBox.setAttribute("id", "container");
+  document.querySelector("body").append(bigBox);
+
+  data.map(function (ele) {
+    var box = document.createElement("div");
+    // box.setAttribute("id", "bb");
+    var image = document.createElement("img");
+    image.setAttribute("src", ele.imgUrl);
+    var name = document.createElement("h2");
+    name.innerText = ele.name;
+    var price = document.createElement("h3");
+    price.innerText = ele.price;
+    var strikedOffPrice = document.createElement("p");
+    strikedOffPrice.innerText = ele.strikedOffPrice;
+    box.append(image, name, price, strikedOffPrice);
+    document.querySelector("#container").append(box);
+  });
+</script>

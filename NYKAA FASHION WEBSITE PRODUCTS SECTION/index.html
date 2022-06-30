@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Session Flex + Position</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .container{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between ;
+    }
+
+    .card {
+        width: 300px;
+        border: 1px solid rgb(224, 224, 224);
+        margin-bottom:30px ;
+        margin-top: 30px;
+    }
+
+    .card-img {
+        width: 100%;
+    }
+
+    .footer {
+        border-top: 1px solid black;
+    }
+
+    h3,
+    p {
+        margin: 5px 0px;
+    }
+
+    .box-img {
+        width: 100%;
+        position: relative;
+    }
+    
+    .box-img > div{
+        position: absolute;
+        bottom: 20px;
+        left: 5PX;
+        display: flex;
+        justify-content: space-between;
+        
+        
+    }
+    .box-img > div > p{
+        background: rgb(235, 244, 255);
+        border: 1px solid rgb(197, 221, 255);
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 2px;        
+        padding: 2px 4px;
+        margin: 0px 8px 8px 0px;
+        
+    }
+    p+p{
+        margin-left: 10px;
+    }
+    span:first-child{
+        color: gray;
+        text-decoration:line-through;
+        margin-left: 10px;
+    }
+    span:last-child{
+        color: green;
+        margin-left: 10px;
+    }
+    p + h3 + p{
+        font-weight: bold;
+        font-size: 14px;
+        color: rgb(104, 95, 95);
+    }
+    .card:first-child {
+        font-size: 18px;
+    }
+    
+   
+    
+
+    
+</style>
+<style>
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="box-img">
+                <img src="https://raw.githubusercontent.com/Sourav12061999/nykaafashion/main/nykaa-clone/Kids%20Page/Images/img1.jpg"
+                    alt="" class="card-img">
+                    <div><p>BESTSELLER</p> <p>OFFER</p></div> 
+            </div>
+            <h3 class="card-heading">Kids Garments</h3>
+            <p>Layers Party Dress-navy Multi</p>
+            <h3 class="card-heading">₹1,800 <span>₹3,000</span> <span>40% Off</span> </h3>
+            <p>1-2 Years, 2-3 Years, 3-4 Years, 4-5 Years, 5-...</p>
+        </div>
+        <div class="card">
+            <div class="box-img">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/5/c/5cf5b19PCF25_1.jpg?rnd=20200526195200"
+                    alt="" class="card-img">
+                <div><p>BESTSELLER</p> <p>OFFER</p></div> 
+            </div>
+            <h3 class="card-heading">Kids Garments</h3>
+            <p>Layers Party Dress-navy Multi</p>
+            <h3 class="card-heading">₹1,800 <span>₹3,000</span> <span>40% Off</span> </h3>
+            <p>1-2 Years, 2-3 Years, 3-4 Years, 4-5 Years, 5-...</p>
+        </div>
+        <div class="card">
+            <div class="box-img">
+                <img src="https://raw.githubusercontent.com/Sourav12061999/nykaafashion/main/nykaa-clone/Kids%20Page/Images/img3.jpg"
+                    alt="" class="card-img">
+                <div><p>EDITOR'S PICK </p> <p>OFFER</p></div>
+            </div>
+            <h3 class="card-heading">Kids Garments</h3>
+            <p>Layers Party Dress-navy Multi</p>
+            <h3 class="card-heading">₹1,800 <span>₹3,000</span> <span>40% Off</span> </h3>
+            <p>1-2 Years, 2-3 Years, 3-4 Years, 4-5 Years, 5-...</p>
+        </div>
+        <div class="card">
+            <div class="box-img">
+                <img src="https://raw.githubusercontent.com/Sourav12061999/nykaafashion/main/nykaa-clone/Kids%20Page/Images/img4.jpg"
+                    alt="" class="card-img">
+                <div><p>BESTSELLER</p> <p>OFFER</p></div>
+            </div>
+            <h3 class="card-heading">Kids Garments</h3>
+            <p>Layers Party Dress-navy Multi</p>
+            <h3 class="card-heading">₹1,800 <span>₹3,000</span> <span>40% Off</span> </h3>
+            <p>1-2 Years, 2-3 Years, 3-4 Years, 4-5 Years, 5-...</p>
+        </div>
+        <div class="card">
+            <div class="box-img">
+                <img src="https://raw.githubusercontent.com/Sourav12061999/nykaafashion/main/nykaa-clone/Kids%20Page/Images/img5.jpg"
+                    alt="" class="card-img">
+                <div><p>BESTSELLER</p> <p>OFFER</p></div>
+            </div>
+            <h3 class="card-heading">Kids Garments</h3>
+            <p>Layers Party Dress-navy Multi</p>
+            <h3 class="card-heading">₹1,800 <span>₹3,000</span> <span>40% Off</span> </h3>
+            <p>1-2 Years, 2-3 Years, 3-4 Years, 4-5 Years, 5-...</p>
+        </div>
+
+    </div>
+</body>
+
+</html>
